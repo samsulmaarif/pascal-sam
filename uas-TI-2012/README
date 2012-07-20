@@ -1,0 +1,53 @@
+Kode program ini ditulis dengan IDE Geany (http://www.geany.org)
+sudah saya ujicoba dengan freepascal (http://www.freepascal.org) sebagai 
+compilernya pada Sistem Operasi BlankOn Ombilin GNU/Linux 
+(http://blankonlinux.or.id).
+
+isi :
+
+-rw-r--r-- 1 samsul samsul 1515 2012-07-19 19:36 Faktorial.pas
+-rw-r--r-- 1 samsul samsul 3308 2012-07-19 19:36 KelilingBidangDatar.pas
+-rw-r--r-- 1 samsul samsul 1189 2012-07-19 19:36 KonversiSuhu.pas
+-rw-r--r-- 1 samsul samsul 1564 2012-07-19 19:52 LuasJajarGenjang.pas
+-rw-r--r-- 1 samsul samsul 1405 2012-07-19 20:03 README.txt
+
+KOMPILASI
+
+untuk mengompilasi (compile) kode sumber tersebut dengan freepascal di
+GNU/Linux dengan mengetikkan di console :
+
+$ fpc namaprogram.pas
+
+akan menghasilkan berkas eksekutabel 'namaprogram' dan berkas objek
+'namaprogram.o'. Jalankan program tersebut dengan :
+
+$ ./namaprogram
+
+Misalnya untuk mengompile berkas 'Faktorial.pas' dengan mengetikkan perintah :
+
+$ fpc Faktorial.pas
+Free Pascal Compiler version 2.4.0-2 [2010/03/06] for i386
+Copyright (c) 1993-2009 by Florian Klaempfl
+Target OS: Linux for i386
+Compiling Faktorial.pas
+Linking Faktorial
+/usr/bin/ld: warning: link.res contains output sections; did you forget -T?
+44 lines compiled, 0.2 sec
+
+CARA LAIN KOMPILASI
+Dengan IDE Geany :
+F8 >> compile
+F5 >> Run
+
+menghasilkan berkas :
+Faktorial       << Berkas eksekutabel (kalau di windows berekstensi EXE)
+faktorial.o     << Berkas objek
+Faktorial.pas   << Kode sumber program (berkas asli)
+
+Demikian penjelasan singkat yang dapat saya tuliskan.
+
+Jika ada saran,pertanyaan maupun masukan silahkan layangkan surel 
+ke mail@samsul.web.id
+
+Terima kasih.
+Salam Open Source!
