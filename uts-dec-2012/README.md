@@ -22,21 +22,24 @@ Pada saat program dieksekusi, kita akan diminta untuk memasukkan data berupa
 NIP, Nama, dan Jabatan sebanyak 5 kali. Setelah itu kelima data itu akan 
 ditampilkan di layar. Di akhir baris, user akan diberi pertanyaan apakah akan 
 mengulang program atau tidak. Program akan berhenti ketika user memilih/
-mengetikkan 'T' yang berarti program tidak dilanjutkan dan code untuk mengakhiri
+mengetikkan `T` yang berarti program tidak dilanjutkan dan code untuk mengakhiri
 program akan dieksekusi.
 
 Listing programnya dapat diakses langsung melalui :
 
     https://github.com/samsulmaarif/pascal-sam/tree/master/uts-dec-2012
 
-Jika git terinstall di sistem operasi Anda, dapat pula Anda clone dengan baris 
-perintah :
+Jika `git` terinstall di sistem operasi Anda, dapat pula Anda clone dengan 
+baris perintah :
 
     git clone https://github.com/samsulmaarif/pascal-sam.git
+
+perintah tersebut akan menyalin seluruh repositori `pascal-sam` ke lokal.
 
 Demikian, semoga bermanfaat.
 
 
-\Regards,
-\@samsulmaarif_
-\mail@samsul.web.id
+
+Regards,  
+@samsulmaarif_  
+mail@samsul.web.id  
