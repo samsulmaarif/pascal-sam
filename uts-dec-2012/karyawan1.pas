@@ -22,86 +22,99 @@
 }
 
 
-program RecordKaryawan;
+program RecordKaryawan; {memberi nama program}
 
-uses crt;
+uses crt; {hanya unit crt yang digunakan}
 
-Type
-	KaryawanRecord = Record
-		NIP : Integer;
-		Nama : String;
-		Jabatan : String;
+Type {tipe data yang digunakan berupa record}
+	anggota = Record
+		nip : Integer;
+		nama : String;
+		jabatan : String;
 	End;
 	
-var 
-	Karyawan : KaryawanRecord ;
+var {deklarasi variabel yang digunakan}
+	karyawan : array[1..5] of anggota ;
+	a		 : char;
+	x		 : integer;
 	
-resourcestring
-	rsPembuka='Selamat Datand di Sistem Informasi Karyawan';
-	rsGarisPanjang='==========================================================';
-	rsInputNIP='Masukkan NIP :';
-	rsInputNama='Masukkan Nama :';
-	rsInputJabatan='Masukkan Jabatan :';
-	rsNIP='NIP :';
-	rsNama='Nama :';
-	rsJabatan='Jabatan :';
+resourcestring {string yang akan ditampilkan pada saat program dieksekusi}
+	rsPembuka		='       Selamat Datang di Sistem Informasi Karyawan        ';
+	rsGarisPanjang	='==========================================================';
+	rsInputData		='           Input Data Karyawan PT. Muktisari              ';
+	rsPTMukti		='                    PT. Muktisari                         ';
+	rsInputNIP		='Masukkan NIP      : ';
+	rsInputNama		='Masukkan Nama     : ';
+	rsInputJabatan	='Masukkan Jabatan  : ';
+	rsNIP			='NIP       : ';
+	rsNama			='Nama      : ';
+	rsJabatan		='Jabatan   : ';
+	rsUlangi		='Apakah akan menambahkan data karyawan? [Y/T]: ';
 	
-procedure Berhenti;
+procedure Berhenti; {prosedur untuk menghentikan program}
 begin
 	writeln;
 	writeln;
 	writeln('Tekan <ENTER> untuk Keluar');
 	readln;
-end;
+end; {akhir untuk prosedur}
 
-procedure MasukkanData;
-var
-	x:integer;
+procedure MasukkanData; {prosedur untuk memasukkan data}
 	
 begin
-	for x := 1 to 5 do
+	for x:= 1 to 5 do
 	begin
-		with Karyawan[x] do
+		with karyawan[x] do
 		begin
 		clrscr();
 		writeln(rsGarisPanjang);
-		writeln(rsPembuka);
+		writeln(rsInputData);
 		writeln(rsGarisPanjang);
 		write(rsInputNIP);
-		readln(NIP);
+		readln(nip);
 		write(rsInputNama);
-		readln(Nama);
+		readln(nama);
 		write(rsInputJabatan);
-		readln(Jabatan);
+		readln(jabatan);
 		writeln; 
-		end;
-	end;
-end;
+		end; {akhir untuk with}
+	end; {akhir untuk for}
+end; {akhir untuk prosedur}
 
-procedure CetakData;
+procedure CetakData; {prosedur untuk mencetak data}
 var 
 	x:integer;
 
 begin
+	writeln(rsGarisPanjang);
+	writeln(rsPembuka);
+	writeln(rsPTMukti);
+	writeln(rsGarisPanjang);	
+	
 	for x := 1 to 5 do
 	begin
-		with Karyawan[x] do
+		with karyawan[x] do
 		begin
-		clrscr();
-		writeln(rsGarisPanjang);
-		writeln(rsPembuka);
-		writeln(rsGarisPanjang);
-		writeln(rsNIP, NIP);
-		writeln(rsNama, Nama);
-		write(rsJabatan, Jabatan);
+		writeln;
+		writeln(rsNIP, nip);
+		writeln(rsNama, nama);
+		write(rsJabatan, jabatan);
 		writeln; 
 		end;
-	end;
-end;
+	end; {akhir untuk loop for}
+end; {akhir untuk prosedur}
 
-BEGIN
-	MasukkanData;
-	clrscr();
-	CetakData;
-	Berhenti;
-END.
+BEGIN {program utama ditulis dari sini}
+	
+	repeat {pengulangan repeat untuk memasukkan data lain jika diperlukan}
+		MasukkanData; {menjalankan prosedur untuk memasukkan data}
+		clrscr();
+		CetakData;
+		writeln;
+		write(rsUlangi);
+		readln(a); 
+		a:=upcase(a);
+	until
+		(a = 't') or (a = 'T');	
+	Berhenti; {menjalankan prosedur untuk menghentikan program}
+END. {akhir program}
