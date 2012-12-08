@@ -39,17 +39,17 @@ var {deklarasi variabel yang digunakan}
 	x		 : integer;
 	
 resourcestring {string yang akan ditampilkan pada saat program dieksekusi}
-	rsPembuka		='       Selamat Datang di Sistem Informasi Karyawan        ';
-	rsGarisPanjang	='==========================================================';
-	rsInputData		='           Input Data Karyawan PT. Muktisari              ';
-	rsPTMukti		='                    PT. Muktisari                         ';
-	rsInputNIP		='Masukkan NIP      : ';
-	rsInputNama		='Masukkan Nama     : ';
-	rsInputJabatan	='Masukkan Jabatan  : ';
-	rsNIP			='NIP       : ';
-	rsNama			='Nama      : ';
-	rsJabatan		='Jabatan   : ';
-	rsUlangi		='Apakah akan menambahkan data karyawan? [Y/T]: ';
+	rsPembuka       ='       Selamat Datang di Sistem Informasi Karyawan        ';
+	rsGarisPanjang  ='==========================================================';
+	rsInputData     ='           Input Data Karyawan PT. Muktisari              ';
+	rsPTMukti       ='                    PT. Muktisari                         ';
+	rsInputNIP      ='Masukkan NIP      : ';
+	rsInputNama     ='Masukkan Nama     : ';
+	rsInputJabatan  ='Masukkan Jabatan  : ';
+	rsNIP           ='NIP       : ';
+	rsNama          ='Nama      : ';
+	rsJabatan       ='Jabatan   : ';
+	rsUlangi        ='Apakah akan menambahkan data karyawan? [Y/T]: ';
 	
 procedure Berhenti; {prosedur untuk menghentikan program}
 begin
