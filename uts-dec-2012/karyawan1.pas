@@ -27,7 +27,7 @@ program RecordKaryawan;
 uses crt;
 
 Type
-	KaryawanRecord = Record;
+	KaryawanRecord = Record
 		NIP : Integer;
 		Nama : String;
 		Jabatan : String;
@@ -35,9 +35,73 @@ Type
 	
 var 
 	Karyawan : KaryawanRecord ;
+	
+resourcestring
+	rsPembuka='Selamat Datand di Sistem Informasi Karyawan';
+	rsGarisPanjang='==========================================================';
+	rsInputNIP='Masukkan NIP :';
+	rsInputNama='Masukkan Nama :';
+	rsInputJabatan='Masukkan Jabatan :';
+	rsNIP='NIP :';
+	rsNama='Nama :';
+	rsJabatan='Jabatan :';
+	
+procedure Berhenti;
+begin
+	writeln;
+	writeln;
+	writeln('Tekan <ENTER> untuk Keluar');
+	readln;
+end;
+
+procedure MasukkanData;
+var
+	x:integer;
+	
+begin
+	for x := 1 to 5 do
+	begin
+		with Karyawan[x] do
+		begin
+		clrscr();
+		writeln(rsGarisPanjang);
+		writeln(rsPembuka);
+		writeln(rsGarisPanjang);
+		write(rsInputNIP);
+		readln(NIP);
+		write(rsInputNama);
+		readln(Nama);
+		write(rsInputJabatan);
+		readln(Jabatan);
+		writeln; 
+		end;
+	end;
+end;
+
+procedure CetakData;
+var 
+	x:integer;
+
+begin
+	for x := 1 to 5 do
+	begin
+		with Karyawan[x] do
+		begin
+		clrscr();
+		writeln(rsGarisPanjang);
+		writeln(rsPembuka);
+		writeln(rsGarisPanjang);
+		writeln(rsNIP, NIP);
+		writeln(rsNama, Nama);
+		write(rsJabatan, Jabatan);
+		writeln; 
+		end;
+	end;
+end;
 
 BEGIN
-	
-	
+	MasukkanData;
+	clrscr();
+	CetakData;
+	Berhenti;
 END.
-
