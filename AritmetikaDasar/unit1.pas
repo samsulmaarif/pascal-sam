@@ -1,11 +1,24 @@
 unit Unit1; 
 
-{$mode objfpc}{$H+}
+{$ifdef fpc}
+  {$mode objfpc}{$H+}
+{$else}
+  {$mode delphi}
+{$endif}
 
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  {$ifdef fpc}
+  // Free Pascal only units
+  LCLIntf, LResources,
+{$else}
+  // Delphi only or Windows only units
+  Windows, Messages,
+{$endif}
+
+  // Units available for both
+  StdCtrls,Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, Buttons;
 
 type
