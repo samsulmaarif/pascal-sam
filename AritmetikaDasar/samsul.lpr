@@ -1,6 +1,10 @@
 program samsul;
 
-{$mode objfpc}{$H+}
+{$ifdef fpc}
+  {$mode objfpc}{$H+}
+{$else}
+  {$mode delphi}
+{$endif}
 
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
