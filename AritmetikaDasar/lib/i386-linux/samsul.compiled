@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1325682925"/>
+  <Params Value=" -MObjFPC -Scghi -CX -O1 -gl -Xs -XX -vewnhi -Fi/mnt/home/samsul/Dokumen/Projects/git/pascal/pascal-sam/AritmetikaDasar/lib/i386-linux -Fu/usr/lib/lazarus/0.9.30.2/lcl/units/i386-linux -Fu/usr/lib/lazarus/0.9.30.2/lcl/units/i386-linux/gtk2 -Fu/usr/lib/lazarus/0.9.30.2/packager/units/i386-linux -Fu/mnt/home/samsul/Dokumen/Projects/git/pascal/pascal-sam/AritmetikaDasar/ -Fu. -FU/mnt/home/samsul/Dokumen/Projects/git/pascal/pascal-sam/AritmetikaDasar/lib/i386-linux/ -osamsul -dLCL -dLCLgtk2 samsul.lpr"/>
+</CONFIG>
