@@ -60,8 +60,11 @@ var
 
 implementation
 
-{$R *.lfm}
-
+{$ifdef fpc}
+  {$R *.lfm}
+{$else}
+  {$R *.dfm}
+{$endif}
 { TForm1 }
 
 
