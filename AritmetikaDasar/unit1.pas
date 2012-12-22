@@ -14,21 +14,30 @@ type
 
   TForm1 = class(TForm)
     BitBtn1: TBitBtn;
-    Button1: TButton;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
+    btnProses: TButton;
+    btnBersih: TButton;
+    edNilai1: TEdit;
+    edNilai2: TEdit;
+    edHasil: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
-    RadioButton3: TRadioButton;
-    RadioButton4: TRadioButton;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    rbtnTambah: TRadioButton;
+    rbtnKurang: TRadioButton;
+    rbtnBagi: TRadioButton;
+    rbtnKali: TRadioButton;
     RadioGroup1: TRadioGroup;
+    procedure btnBersihClick(Sender: TObject);
+    procedure btnProsesClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { private declarations }
+    procedure Bersih;
   public
     { public declarations }
   end; 
@@ -40,5 +49,44 @@ implementation
 
 {$R *.lfm}
 
-end.
+{ TForm1 }
 
+
+procedure TForm1.btnProsesClick(Sender: TObject);
+begin
+    try
+     if rbtnTambah.Checked = true then
+     edHasil.Text := FloatToStr(StrToFloat(edNilai1.Text) + StrToFloat(edNilai2.Text))
+     else if rbtnKurang.Checked = true then
+     edHasil.Text := FloatToStr(StrToFloat(edNilai1.Text) - StrToFloat(edNilai2.Text))
+     else if rbtnBagi.Checked = true then
+     edHasil.Text := FloatToStr(StrToFloat(edNilai1.Text) / StrToFloat(edNilai2.Text))
+     else if rbtnKali.Checked = true then
+     edHasil.Text := FloatToStr(StrToFloat(edNilai1.Text) * StrToFloat(edNilai2.Text))
+     else
+       ShowMessage('Pilih dulu Operatornya Kang/Mba');
+     except
+       on E:Exception do
+       ShowMessage(E.Message);
+     end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Bersih;
+end;
+
+procedure TForm1.btnBersihClick(Sender: TObject);
+begin
+  Bersih;
+end;
+
+
+procedure TForm1.Bersih;
+begin
+    edNilai1.Clear;
+    edNilai2.Clear;
+    edHasil.Clear;
+end;
+
+end.
