@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 397
+  Left = 376
   Height = 319
-  Top = 196
+  Top = 199
   Width = 488
   BorderStyle = bsSingle
   Caption = 'Samsul Ma''arif'
@@ -70,6 +70,7 @@ object Form1: TForm1
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 125
     ClientWidth = 106
+    ParentBidiMode = False
     TabOrder = 2
     object rbtnTambah: TRadioButton
       Left = 6

@@ -1,3 +1,5 @@
+{%BuildWorkingDir ./_build/}
+{%RunWorkingDir ./_build/}
 program samsul;
 
 {$ifdef fpc}
