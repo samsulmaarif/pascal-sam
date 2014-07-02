@@ -1,0 +1,25 @@
+==============================
+TUGAS PRAKTIKUM PEMROGRAMAN II
+==============================
+
+------------------------
+STT TELEMATIKA CAKRAWALA
+------------------------
+
+
+	Nama        : Samsul Ma'arif
+	NPM         : 11312018
+	Semester    : III
+	Mata Kuliah : Pemrograman II
+	Dosen       : Nuryadin, S.Kom.
+
+
+
+Konten :
+	.
+	├── DesimalKeBiner     # berkas executable
+	├── DesimalKeBiner.o   # berkas objek
+	├── DesimalKeBiner.pas # Source Code
+	└── README
+
+	0 directories, 4 files
